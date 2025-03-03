@@ -1,0 +1,107 @@
+/* Full-screen container for services */
+.services-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Horizontal wrapper for panels */
+.services-wrapper {
+  display: flex;
+  width: calc(100vw * 4);  /* 4 panels */
+  height: 100%;
+}
+
+/* Each panel occupies exactly 100vw */
+.service-page {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Panel 1 background */
+.service-page:first-child {
+  background-color: #4A148C;
+}
+
+/* Other panels background */
+.service-page:not(:first-child) {
+  background-color: #0A0A0A;
+}
+
+/* Container for button and text (stacked vertically) layered above the image box */
+.service-content {
+  position: absolute;
+  right: calc(240px + 451px + 10px); /* Maintain the same horizontal offset as before */
+  top: 40%; /* Adjust vertical position as needed */
+  transform: translateY(-50%);
+  text-align: right;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* BOOK NOW button styling */
+.service-book-button {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-bottom: 10px; /* Spacing between button and text */
+}
+
+.service-book-button:hover {
+  background: white;
+  color: black;
+}
+
+/* Service text container (below button) */
+.service-text {
+  text-align: right;
+  color: white;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+/* "WEB" text styling */
+.service-title-line1 {
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+/* "DEVELOPMENT" text styling and overlap */
+.service-title-line2 {
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -60px; /* Overlap adjustment */
+  z-index: 2;
+}
+
+/* Image box positioned 240px from right */
+.service-image-box {
+  position: absolute;
+  right: 240px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 451px;
+  height: 589px;
+  border: 5px solid #390e68;
+  overflow: hidden;
+  box-shadow: -25px 34px 4px 0px #000;
+}
+
+/* Image styling */
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -56,9 +56,9 @@ function HeroSection() {
           LET US <span className="dynamic-word">{displayedWord}</span> FOR YOU.
         </div>
         <div className="cta-container">
-          <button className="cta-button about">About us</button>
+          <button className="cta-button about">ABOUT US</button>
           <img src={logo} alt="Company Logo" className="cta-logo" />
-          <button className="cta-button works">Our Works</button>
+          <button className="cta-button works">OUR WORKS</button>
         </div>
       </div>
     </section>
